@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="checkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  
+  <!-- Checkmark -->
+  <path d="M18 32 L28 42 L46 24" stroke="url(#checkGradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Confetti particles - top left -->
+  <circle cx="12" cy="14" r="3" fill="#ef4444"/>
+  <circle cx="8" cy="20" r="2" fill="#f59e0b"/>
+  <circle cx="16" cy="10" r="2.5" fill="#8b5cf6"/>
+  
+  <!-- Confetti particles - top right -->
+  <rect x="50" y="12" width="5" height="3" rx="1" fill="#06b6d4" transform="rotate(30 52 13.5)"/>
+  <rect x="54" y="18" width="4" height="4" rx="0.5" fill="#ec4899" transform="rotate(45 56 20)"/>
+  <circle cx="48" cy="8" r="2" fill="#10b981"/>
+  
+  <!-- Confetti particles - bottom left -->
+  <polygon points="10,48 12,52 8,52" fill="#f97316"/>
+  <circle cx="14" cy="54" r="2" fill="#6366f1"/>
+  
+  <!-- Confetti particles - bottom right -->
+  <rect x="50" y="48" width="4" height="4" rx="0.5" fill="#eab308" transform="rotate(-15 52 50)"/>
+  <circle cx="54" cy="44" r="2" fill="#14b8a6"/>
+  <polygon points="56,52 58,56 54,56" fill="#f43f5e"/>
+  
+  <!-- Sparkles -->
+  <g fill="#fbbf24">
+    <path d="M20 8 L21 10 L23 11 L21 12 L20 14 L19 12 L17 11 L19 10 Z"/>
+    <path d="M44 10 L45 12 L47 13 L45 14 L44 16 L43 14 L41 13 L43 12 Z"/>
+    <path d="M8 40 L9 42 L11 43 L9 44 L8 46 L7 44 L5 43 L7 42 Z"/>
+    <path d="M56 34 L57 36 L59 37 L57 38 L56 40 L55 38 L53 37 L55 36 Z"/>
+  </g>
+</svg>
