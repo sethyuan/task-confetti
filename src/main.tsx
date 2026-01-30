@@ -27,7 +27,7 @@ function createFireworks() {
       spread: 55,
       origin: { x: 0, y: 0.45 },
       colors,
-      disableForReducedMotion: true,
+      disableForReducedMotion: false,
       zIndex: 9999,
     });
 
