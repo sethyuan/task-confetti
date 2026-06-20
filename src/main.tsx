@@ -62,15 +62,21 @@ export async function load(_name: string) {
   setupL10N(orca.state.locale, { "zh-CN": zhCN });
 
   // Register after hook for setProperties command
-  afterTaskCommandHook = async (
-    cmdId: string,
-    blockId: DbId,
-    properties: BlockProperty[],
-  ) => {
+  afterTaskCommandHook = async (cmdId: string, ...args: any[]) => {
+    const isNewFormat = args.length === 1;
     // Check if this is a task completion
-    if (isTaskCompleted(properties)) {
-      // Trigger fireworks
-      createFireworks();
+    if (isNewFormat) {
+      const items = args[0] as { id: DbId; properties: BlockProperty[] }[];
+      if (items.some(({ properties }) => isTaskCompleted(properties))) {
+        // Trigger fireworks
+        createFireworks();
+      }
+    } else {
+      const properties = args[1] as BlockProperty[];
+      if (isTaskCompleted(properties)) {
+        // Trigger fireworks
+        createFireworks();
+      }
     }
   };
   orca.commands.registerAfterCommand(
